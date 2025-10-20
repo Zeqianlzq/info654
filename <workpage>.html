@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    /* Basic page styles (W3Schools-level) */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+/* Top navigation bar */
+.topnav {
+  background-color: #2f4f60;
+  color: #ffffff;
+  padding: 12px 16px;
+  overflow: hidden; /* helps contain floated children */
+}
+.topnav .logo {
+  float: left;
+  font-weight: bold;
+  font-size: 18px;
+}
+.topnav .logo a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.topnav .links {
+  float: right;
+}
+.topnav .links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 10px;
+  display: inline-block;
+}
+.topnav .links a:hover {
+  text-decoration: underline;
+}
+.topnav .links .active {
+  text-decoration: underline;
+}
+
+/* Wrap page content */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+.intro h1 {
+  margin: 0 0 6px 0;
+  font-size: 28px;
+}
+.intro p {
+  color: #555555;
+}
+
+/* Simple chips (anchors) */
+.chips { margin-top: 12px; }
+.chip {
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #2f4f60;
+  margin: 4px 6px 0 0;
+}
+.chip:hover { background-color: #f5f5f5; }
+
+/* Section titles */
+.section-title {
+  margin: 28px 0 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #555555;
+  text-transform: uppercase;
+}
+
+/* Card row using floats (W3Schools-style layout) */
+.row::after {
+  content: "";
+  display: table;
+  clear: both; /* clearfix for floated columns */
+}
+
+/* Each card is a "column" */
+.card {
+  float: left;
+  width: 31%;         /* three in a row with some gap */
+  margin-right: 3.5%; /* gap */
+  margin-bottom: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 12px;
+  box-sizing: border-box; /* W3Schools shows this too */
+}
+.card:nth-child(3n) {
+  margin-right: 0;    /* remove right margin on every 3rd card */
+}
+
+/* Card content */
+.card img {
+  width: 100%;
+  height: auto;       /* responsive images */
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 8px;
+}
+.card h3 {
+  margin: 6px 0;
+  font-size: 18px;
+}
+.card p {
+  margin: 6px 0;
+  color: #444444;
+}
+.btn {
+  background-color: #2f4f60;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.btn:hover { background-color: #213640; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 16px 0 24px 0;
+  color: #666666;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+}
+
+/* Simple responsiveness (W3Schools media query) */
+@media screen and (max-width: 900px) {
+  .card { width: 48%; margin-right: 4%; }
+  .card:nth-child(2n) { margin-right: 0; }
+  .topnav .links { float: none; text-align: right; margin-top: 6px; }
+}
+@media screen and (max-width: 600px) {
+  .card { width: 100%; margin-right: 0; }
+  .topnav .logo, .topnav .links { float: none; text-align: center; }
+}
+
+</style>
+<head>
+  <meta charset="utf-8">
+  <title>Zeqian Li — Selected Works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Simple top nav -->
+  <div class="topnav">
+    <div class="logo"><a href="index.html">Zeqian Li</a></div>
+    <div class="links">
+      <a href="work.html" class="active">Works</a>
+      <a href="index.html#about">About</a>
+      <a href="mailto:cherryzeqian@gmail.com">Contact</a>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <div class="container">
+    <div class="intro">
+      <h1>Selected Works</h1>
+      <p>Projects across product/interaction design and media art.</p>
+
+      <!-- Simple anchor "chips" (no JS) -->
+      <div class="chips">
+        <a href="#design" class="chip">Product &amp; Interaction Design</a>
+        <a href="#art" class="chip">Art / Media Works</a>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <h2 id="design" class="section-title">Product &amp; Interaction Design</h2>
+
+    <!-- Card row -->
+    <div class="row">
+      <div class="card">
+        <img src="project1.jpg" alt="GameFi Life preview">
+        <h3>GameFi Life</h3>
+        <p>Interactive financial-education system using story and feedback.</p>
+        <p><a class="btn" href="gamefi.html">View Project &rarr;</a></p>
+      </div>
+
+      <div class="card">
+        <img src="project2.jpg" alt="Pollen Machine preview">
+        <h3>Pollen Machine</h3>
+        <p>Hardware + app to visualize pollination and air-quality data.</p>
+        <p><a class="btn" href="pollen.html">View Project &rarr;</a></p>
+      </div>
+
+      <div class="card">
+        <img src="project3.jpg" alt="8-bit Rental redesign preview">
+        <h3>8-bit Rental</h3>
+        <p>UX/UI redesign with real-time inventory and booking.</p>
+        <p><a class="btn" href="8bit.html">View Project &rarr;</a></p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <h2 id="art" class="section-title">Art / Media Works</h2>
+
+    <div class="row">
+      <div class="card">
+        <img src="project4.jpg" alt="Memories installation preview">
+        <h3>Memories: Falling, Flowing, Fading</h3>
+        <p>Interactive video installation on memory, time, and loss.</p>
+        <p><a class="btn" href="memories.html">View Project &rarr;</a></p>
+      </div>
+      <!-- Add more cards if you like -->
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Zeqian Li</p>
+    </div>
+  </div>
+
+</body>
+</html>
